@@ -2,7 +2,6 @@ Permutation Calculator
 
 Overview
 
-
 Permutation Calculator is a C++ project designed to manipulate and manage permutations using linked lists. This project involves inserting permutations into a linked list, validating them, converting between factorial values and permutations, and performing permutation transformations.
 
 Features
