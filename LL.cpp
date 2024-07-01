@@ -6,11 +6,8 @@
  *Inserts a new element at the beginning of the linked list.
  * before inserting,returns false if first 2 values in both new permutation and current head are similar,
  * else inserts and returns true.
- * @param value The value to be inserted into the linked list.
- * @returns true if permutation is valid to insert, else false.
  */
 bool LL::insert(int value) {
-    // A check if list isn't empty and comparison between first 2 indexes in new perm and current perm in head position.
     if (head) {
         int* existingHeadPermArray = getPermValue(head->getData(), permLength);
         int* newPermArray = getPermValue(value, permLength);
@@ -31,7 +28,6 @@ bool LL::insert(int value) {
 
 /** Iterates over the linked list and searches for a specific value.
  * if found it returns true, else false.
- * @param data the value to search in the list.
  * @returns True if found, False if not.
  * */
 bool LL::searchElement(int data) {
@@ -48,8 +44,6 @@ bool LL::searchElement(int data) {
 
 /** getPermValue receives a factorial value and size of an array
  *  and returns an array of the certain permutation.
- *  @param data factorial value to transform to array.
- *  @param size size of the array.
  *  @returns as permutation array.
  * */
 int *LL::getPermValue(int data,int size) {
@@ -57,7 +51,6 @@ int *LL::getPermValue(int data,int size) {
     int revPermArrayIdx = size-1,counter = 1;
     int revPermArray[size];
     while(counter<=size){
-        // insertion of values in the array.
         revPermArray[revPermArrayIdx] = data%counter;
         data = int(data/counter);
         counter++;
@@ -82,8 +75,6 @@ int *LL::getPermValue(int data,int size) {
 }
 /** getFactValue receives an array that represents a permutation
  * and returns its factorial value.
- * @param data an array that represents a permutation.
- * @param size the size of the given array.
  * @returns a factorial value of the permutation.
  * */
 int LL::getFactValue(const int *data,const int size) {
@@ -105,8 +96,6 @@ int LL::getFactValue(const int *data,const int size) {
 /** This function gets a factorial value and an index for PT algorithm.
  *  Calls pushToTop function and gets the new factorial value after PT,
  *  eventually searches if the value is already in the linked list.
- *  @param factValue factorial value of the permutation.
- *  @param index index to perform PT algorithm.
  *  @returns true if permutation can be added, else false.
  * */
 bool LL::tryPushToTop(int factValue, int index) {
@@ -123,8 +112,6 @@ bool LL::tryPushToTop(int factValue, int index) {
 
 /** pushToTop gets a factorial value, index for PT algorithm, it performs PT algorithm
  * and returns the permutation factorial value after PT.
- * @param index for PT algorithm.
- * @param factValue factorial value of a permutation.
  * @returns a new array after the PT change.
  * */
 int LL::pushToTop(int factValue, int index) {
@@ -152,10 +139,7 @@ int LL::calcFactorial(int data) {
 /**
  * This function parses a comma-separated string permutation,
  * validates its elements, calculates their sum, and checks if the sum is valid.
- * @param str The input string representing a permutation.
- * @param permArray An array to store the parsed permutations.
  * @param arraySize The size of the permutation array.
- *
  * @returns true if the string is a valid permutation.
  *         false otherwise with  error messages printed to std::cerr.
  */
