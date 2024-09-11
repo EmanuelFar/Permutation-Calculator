@@ -38,6 +38,10 @@ cd permutation-calculator``
 Manually compiling:
 g++ -std=c++11 -o permutation_calculator LL.cpp main.cpp
 
+Arguments to main:
+
+< Permutation Dimention > ( ((1, 3, 2) is a permutation of dimention 3.) , < Max Number of permutations > (3! for the exmaple, for big numbers insert a reasonable number, not neccesarily n!) 
+
 ## Run the executable
 ./permutation_calculator
 
