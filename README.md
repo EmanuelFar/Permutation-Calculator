@@ -14,7 +14,7 @@ Permutation Calculator is a C++ project designed to manipulate and manage permut
 ## Usage
 You can use the LL class to manage permutations stored as factorial values. Below are some common operations:
 
-Insert a permutation: Inserts a new permutation into the linked list after validating its first two values.
+Insert a permutation: Inserts a new permutation into the linked list after validating its first two values - for example `1 1,3,2`.
 Search for a permutation: Checks if a permutation (by its factorial value) exists in the list.
 Convert between factorial values and permutations: Provides methods to convert between factorial values and their corresponding permutations.
 Print the list: Various functions to print the linked list in different formats.
